@@ -61,10 +61,10 @@ hr {
 Add the correct text decoration in Chrome, Edge, and Safari.
 */
 
-abbr:where([title]) {
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
-}
+/*abbr:where([title]) {*/
+/*  -webkit-text-decoration: underline dotted;*/
+/*          text-decoration: underline dotted;*/
+/*}*/
 
 /*
 Remove the default font size and weight for headings.
@@ -400,7 +400,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 [type='text']:focus, [type='email']:focus, [type='url']:focus, [type='password']:focus, [type='number']:focus, [type='date']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='week']:focus, [multiple]:focus, textarea:focus, select:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
-  --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
+  /*--tw-ring-inset: var(--tw-empty,!*!*! !*!*!);*/
   --tw-ring-offset-width: 0px;
   --tw-ring-offset-color: #fff;
   --tw-ring-color: #2563eb;
@@ -425,9 +425,9 @@ input::placeholder,textarea::placeholder {
   opacity: 1;
 }
 
-::-webkit-datetime-edit-fields-wrapper {
-  padding: 0;
-}
+/*::-webkit-datetime-edit-fields-wrapper {*/
+/*  padding: 0;*/
+/*}*/
 
 ::-webkit-date-and-time-value {
   min-height: 1.5em;
@@ -488,7 +488,7 @@ select {
 [type='checkbox']:focus,[type='radio']:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
-  --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
+  /*--tw-ring-inset: var(--tw-empty,!*!*! !*!*!);*/
   --tw-ring-offset-width: 2px;
   --tw-ring-offset-color: #fff;
   --tw-ring-color: #2563eb;
@@ -546,50 +546,50 @@ select {
   outline: 1px auto -webkit-focus-ring-color;
 }
 
-*, ::before, ::after {
-  --tw-translate-x: 0;
-  --tw-translate-y: 0;
-  --tw-rotate: 0;
-  --tw-skew-x: 0;
-  --tw-skew-y: 0;
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
-  --tw-pan-x:  ;
-  --tw-pan-y:  ;
-  --tw-pinch-zoom:  ;
-  --tw-scroll-snap-strictness: proximity;
-  --tw-ordinal:  ;
-  --tw-slashed-zero:  ;
-  --tw-numeric-figure:  ;
-  --tw-numeric-spacing:  ;
-  --tw-numeric-fraction:  ;
-  --tw-ring-inset:  ;
-  --tw-ring-offset-width: 0px;
-  --tw-ring-offset-color: #fff;
-  --tw-ring-color: rgb(59 130 246 / 0.5);
-  --tw-ring-offset-shadow: 0 0 #0000;
-  --tw-ring-shadow: 0 0 #0000;
-  --tw-shadow: 0 0 #0000;
-  --tw-shadow-colored: 0 0 #0000;
-  --tw-blur:  ;
-  --tw-brightness:  ;
-  --tw-contrast:  ;
-  --tw-grayscale:  ;
-  --tw-hue-rotate:  ;
-  --tw-invert:  ;
-  --tw-saturate:  ;
-  --tw-sepia:  ;
-  --tw-drop-shadow:  ;
-  --tw-backdrop-blur:  ;
-  --tw-backdrop-brightness:  ;
-  --tw-backdrop-contrast:  ;
-  --tw-backdrop-grayscale:  ;
-  --tw-backdrop-hue-rotate:  ;
-  --tw-backdrop-invert:  ;
-  --tw-backdrop-opacity:  ;
-  --tw-backdrop-saturate:  ;
-  --tw-backdrop-sepia:  ;
-}
+/**, ::before, ::after {*/
+/*  --tw-translate-x: 0;*/
+/*  --tw-translate-y: 0;*/
+/*  --tw-rotate: 0;*/
+/*  --tw-skew-x: 0;*/
+/*  --tw-skew-y: 0;*/
+/*  --tw-scale-x: 1;*/
+/*  --tw-scale-y: 1;*/
+/*  --tw-pan-x:  ;*/
+/*  --tw-pan-y:  ;*/
+/*  --tw-pinch-zoom:  ;*/
+/*  --tw-scroll-snap-strictness: proximity;*/
+/*  --tw-ordinal:  ;*/
+/*  --tw-slashed-zero:  ;*/
+/*  --tw-numeric-figure:  ;*/
+/*  --tw-numeric-spacing:  ;*/
+/*  --tw-numeric-fraction:  ;*/
+/*  --tw-ring-inset:  ;*/
+/*  --tw-ring-offset-width: 0px;*/
+/*  --tw-ring-offset-color: #fff;*/
+/*  --tw-ring-color: rgb(59 130 246 / 0.5);*/
+/*  --tw-ring-offset-shadow: 0 0 #0000;*/
+/*  --tw-ring-shadow: 0 0 #0000;*/
+/*  --tw-shadow: 0 0 #0000;*/
+/*  --tw-shadow-colored: 0 0 #0000;*/
+/*  --tw-blur:  ;*/
+/*  --tw-brightness:  ;*/
+/*  --tw-contrast:  ;*/
+/*  --tw-grayscale:  ;*/
+/*  --tw-hue-rotate:  ;*/
+/*  --tw-invert:  ;*/
+/*  --tw-saturate:  ;*/
+/*  --tw-sepia:  ;*/
+/*  --tw-drop-shadow:  ;*/
+/*  --tw-backdrop-blur:  ;*/
+/*  --tw-backdrop-brightness:  ;*/
+/*  --tw-backdrop-contrast:  ;*/
+/*  --tw-backdrop-grayscale:  ;*/
+/*  --tw-backdrop-hue-rotate:  ;*/
+/*  --tw-backdrop-invert:  ;*/
+/*  --tw-backdrop-opacity:  ;*/
+/*  --tw-backdrop-saturate:  ;*/
+/*  --tw-backdrop-sepia:  ;*/
+/*}*/
 .fixed {
   position: fixed;
 }

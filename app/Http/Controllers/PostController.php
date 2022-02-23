@@ -54,8 +54,14 @@ class PostController extends Controller
     {
 //        $post_data = Post::all();
         $userid = $request->user()->id; // tells which user is active
-        $post_data = Post::where('user_id', $userid)->get();    //get data from active user
-        return view('dashboard', compact('post_data'));
+        if($userid==4){
+            $post_data = Post::all();
+            return view('dashboard', compact('post_data'));
+        }else{
+            $post_data = Post::where('user_id', $userid)->get();    //get data from active user
+            return view('dashboard', compact('post_data'));
+        }
+
     }
 
     /**
