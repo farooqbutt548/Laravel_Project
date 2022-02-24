@@ -52,12 +52,15 @@ class PostController extends Controller
      */
     public function showPost(Request $request)
     {
+//        dd($request->user()->name);
 //        $post_data = Post::all();
-        $userid = $request->user()->id; // tells which user is active
-        if($userid==4){
+
+        $useremail = $request->user()->email; // tells which user is active
+        if($useremail=='admin@gmail.com'){
             $post_data = Post::all();
             return view('dashboard', compact('post_data'));
         }else{
+            $userid = $request->user()->id;
             $post_data = Post::where('user_id', $userid)->get();    //get data from active user
             return view('dashboard', compact('post_data'));
         }
