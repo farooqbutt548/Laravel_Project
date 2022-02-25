@@ -19,8 +19,8 @@ Route::middleware(['auth'])->group(function (){
         return view('report');
     });
     Route::get('dashboard', [PostController::class, 'showPost'])->name('dashboard');
-    Route::get('/post',[PostController::class, 'index'])->name('post');
-//    Route::get('adminLogin',[PostController::class, 'adminLogin'])->name('adminLogin');
+    Route::get('/post',[PostController::class, 'index'])->middleware('can:isAdmin')->name('post');
+
 
 });
 //{End Middleware }
@@ -32,5 +32,6 @@ Route::post('/post',[PostController::class, 'store'])->name('post');
 Route::get('edit_post/{id}', [PostController::class, 'edit_post'])->name('edit_post');
 Route::get('delete_post/{id}', [PostController::class, 'delete_post'])->name('delete_post');
 Route::post('edit_update/{id}', [PostController::class, 'edit_update'])->name('edit_update');
-
+Route::get('uploadpage', [PostController::class, 'uploadpage'])->name('uploadpage');
+Route::post('uploadproduct', [PostController::class,'uploadproduct'])->name('uploadproduct');
 require __DIR__.'/auth.php';

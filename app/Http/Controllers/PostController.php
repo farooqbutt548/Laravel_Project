@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\User;
+
 class PostController extends Controller
 {
     /**
@@ -52,11 +54,8 @@ class PostController extends Controller
      */
     public function showPost(Request $request)
     {
-//        dd($request->user()->name);
-//        $post_data = Post::all();
-
-        $useremail = $request->user()->email; // tells which user is active
-        if($useremail=='admin@gmail.com'){
+        $useremail = $request->user()->email; // tells which user is active by email
+        if($useremail==='admin@gmail.com'){
             $post_data = Post::all();
             return view('dashboard', compact('post_data'));
         }else{
@@ -107,4 +106,20 @@ class PostController extends Controller
         $post_data->delete();
         return redirect('dashboard')->with('status', 'Record Deleted!!');
     }
+    public function uploadpage(){
+        return view('product');
+    }
+    public function uploadproduct(Request $request){
+        $data = new Product;
+        $file = $request->file;
+        $filename = time().'.'.$file->getClientOriginalExtension();
+        $file->move('assets/', $filename);
+        $data->file=$filename;
+
+        $data->name = $request->name;
+        $data->description = $request->description;
+        $data->save();
+        return redirect()->back();
+    }
 }
+
