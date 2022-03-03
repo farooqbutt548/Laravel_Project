@@ -11,7 +11,7 @@
     <tr>
         <td>{{$data->name}}</td>
         <td>{{$data->description}}</td>
-        <td><a href="{{route('downloadFile',$data->file)}}">Download</a> </td>
+        <td><a href="{{route('downloadFile',$data->file)}}" onclick="return confirm('Are you sure to Download')">Download</a> </td>
         <td> <a href="{{route('viewFile',$data->id)}}">View</a> </td>
     </tr>
     @endforeach

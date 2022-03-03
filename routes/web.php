@@ -28,6 +28,7 @@ Route::middleware(['auth'])->group(function (){
 
 Route::get('show-auth-user', [ShowController::class, 'show_auth_user']);
 Route::get('check_auth_user', [ShowController::class, 'check_auth_user']);
+
 Route::post('/post',[PostController::class, 'store'])->name('post');
 Route::get('edit_post/{id}', [PostController::class, 'edit_post'])->name('edit_post');
 Route::get('delete_post/{id}', [PostController::class, 'delete_post'])->name('delete_post');
