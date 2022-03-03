@@ -110,16 +110,28 @@ class PostController extends Controller
         return view('product');
     }
     public function uploadproduct(Request $request){
-        $data = new Product;
-        $file = $request->file;
-        $filename = time().'.'.$file->getClientOriginalExtension();
-        $file->move('assets/', $filename);
-        $data->file=$filename;
+            $data = new Product;
+            $file = $request->file;
+            $filename = time().'.'.$file->getClientOriginalExtension();
+            $file->move('assets/', $filename);  // store in assets folder
+            $data->file=$filename;  // store in data base
 
         $data->name = $request->name;
         $data->description = $request->description;
         $data->save();
         return redirect()->back();
+    }
+    public function showproduct()
+    {
+        $data = Product::all();
+        return view('showproduct', compact('data'));
+    }
+    public function viewFile($id){
+        $data = Product::find($id);
+        return view('viewproduct', compact('data'));
+    }
+    public function downloadFile(Request $request, $file){
+        return response()->download(public_path('assets/'.$file));
     }
 }
 

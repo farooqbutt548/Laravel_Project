@@ -34,4 +34,8 @@ Route::get('delete_post/{id}', [PostController::class, 'delete_post'])->name('de
 Route::post('edit_update/{id}', [PostController::class, 'edit_update'])->name('edit_update');
 Route::get('uploadpage', [PostController::class, 'uploadpage'])->name('uploadpage');
 Route::post('uploadproduct', [PostController::class,'uploadproduct'])->name('uploadproduct');
+Route::get('showproduct', [PostController::class,'showproduct'])->name('showproduct');
+Route::get('viewFile/{id}', [PostController::class,'viewFile'])->name('viewFile');
+Route::get('downloadFile/{file}', [PostController::class,'downloadFile'])->name('downloadFile');
+
 require __DIR__.'/auth.php';

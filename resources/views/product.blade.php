@@ -8,12 +8,13 @@
     <title>Document</title>
 </head>
 <body>
-<form action="{{route('uploadproduct')}}" method="POST" enctype="multipart/form-data" ><br>
-    @csrf
-    Product Name : <input type="text" name="name" placeholder="Product Name..."><br><br>
-    Description : <input type="text" name="description" placeholder="Description..."><br><br>
-    File :<input type="file" name="file"><br><br>
-    <input type="submit">
-</form>
+    <form action="{{route('uploadproduct')}}" method="POST" enctype="multipart/form-data" ><br>
+        @csrf
+        Product Name : <input type="text" name="name" placeholder="Product Name..."><br><br>
+        Description : <input type="text" name="description" placeholder="Description..."><br><br>
+        File :<input type="file" name="file"><br><br>
+        <input type="submit">
+        <a href="{{route('showproduct')}}" >Show Product</a>
+    </form>
 </body>
 </html>
