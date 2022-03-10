@@ -38,5 +38,4 @@ Route::post('uploadproduct', [PostController::class,'uploadproduct'])->name('upl
 Route::get('showproduct', [PostController::class,'showproduct'])->name('showproduct');
 Route::get('viewFile/{id}', [PostController::class,'viewFile'])->name('viewFile');
 Route::get('downloadFile/{file}', [PostController::class,'downloadFile'])->name('downloadFile');
-
 require __DIR__.'/auth.php';

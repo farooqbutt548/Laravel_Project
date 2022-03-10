@@ -10,7 +10,8 @@ use Illuminate\Http\Request;
 class ApiController extends Controller
 {
     function firstApi(){
-        return ['name'=>'Farooq', 'company'=>'Invictus Solution', 'status'=>'Internee'];
+        return"Farooq";
+//        return ['name'=>'Farooq', 'company'=>'Invictus Solution', 'status'=>'Internee'];
 //    return view('post');
     }
 
